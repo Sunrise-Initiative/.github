@@ -1,3 +1,5 @@
+<p align="center"><img src="sunrise-logo.png" alt="Logo da Sunrise Initiative" width="240"></p>
+
 # Sunrise Initiative
 
 Desenvolvemos o **Sunrise OS**, um sistema desktop de código aberto sobre Linux para PCs x86-64 com UEFI. A interface combina transparências e referências ao estilo Frutiger Aero, com uma variante em violeta e laranja chamada **Sunrise Glass**.
