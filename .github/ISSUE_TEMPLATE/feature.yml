@@ -1,0 +1,22 @@
+name: Sugerir melhoria
+description: Proponha uma melhoria para o Sunrise.
+title: "[Melhoria] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Necessidade
+      description: Qual tarefa ou dificuldade motivou a sugestão?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Comportamento proposto
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional
+      description: Exemplos, referências ou alternativas consideradas.
