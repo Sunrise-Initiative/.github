@@ -1,0 +1,30 @@
+name: Relatar problema
+description: Informe uma falha reproduzível.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Aplicativo, versão ou commit, sistema operacional e tema quando relevante.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passos para reproduzir
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Resultado observado
+      description: Inclua imagens ou logs relevantes, removendo informações pessoais.
+    validations:
+      required: true

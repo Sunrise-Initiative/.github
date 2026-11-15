@@ -1,0 +1,30 @@
+name: Profile CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  profile:
+    name: Profile assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Validate local profile assets
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          text = Path("profile/README.md").read_text(encoding="utf-8")
+          assert text.strip(), "Empty organization profile"
+          prefix = "https://raw.githubusercontent.com/Sunrise-Initiative/.github/main/"
+          for source in re.findall(r'<img[^>]+src="([^"]+)"', text):
+              if source.startswith(prefix):
+                  path = Path(source.removeprefix(prefix))
+                  assert path.is_file(), f"Missing profile image: {path}"
+          assert Path("CONTRIBUTING.md").is_file()
