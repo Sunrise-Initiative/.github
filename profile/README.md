@@ -1,24 +1,54 @@
-<p align="center"><img src="sunrise-logo.png" alt="Logo da Sunrise Initiative" width="240"></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Sunrise-Initiative/.github/main/profile/assets/sunrise-logo.png" alt="Sunrise Initiative" width="88">
+</p>
 
-# Sunrise Initiative
+<h1 align="center">Sunrise Initiative</h1>
 
-Desenvolvemos o **Sunrise OS**, um sistema desktop de código aberto sobre Linux para PCs x86-64 com UEFI. A interface combina transparências e referências ao estilo Frutiger Aero, com uma variante em violeta e laranja chamada **Sunrise Glass**.
+<p align="center"><strong>Ferramentas abertas para criar com liberdade.</strong></p>
 
-## Onde estamos
+<p align="center">
+  <a href="https://sunrise-website-orcin.vercel.app/">Site oficial</a> ·
+  <a href="https://github.com/Sunrise-Initiative/sunrise-launcher">Sunrise Launcher</a> ·
+  <a href="https://github.com/Sunrise-Initiative/sunrise-launcher/blob/main/CHANGELOG.md">Novidades</a> ·
+  <a href="https://github.com/Sunrise-Initiative/sunrise-launcher/issues">Contribuir</a>
+</p>
 
-O primeiro protótipo do menu de aplicativos já abre em uma sessão Wayland no Fedora e lista os aplicativos instalados. O catálogo em Rust passou nos testes iniciais. A abertura dos aplicativos pela interface e o teste em uma segunda VM ainda estão pendentes.
+Construímos um ecossistema de aplicativos desktop de código aberto para imagem, vídeo, design e documentos. Nosso trabalho é orientado por processamento local, controle dos próprios arquivos e interfaces cuidadas, com uma identidade visual inspirada no Frutiger Aero.
 
-O próximo marco é uma sessão de desenvolvimento com painel, dock e menu de aplicativos, acompanhada de uma prova separada do compositor em uma sessão Wayland aninhada.
+### Conheça o Sunrise Launcher
 
-## Como o desktop é construído
+O primeiro aplicativo com código público reúne o catálogo Sunrise, busca, páginas de produtos e uma biblioteca para abrir executáveis locais. É desenvolvido em **Rust**, com **egui, eframe e wgpu**, e oferece temas claro e escuro, navegação por teclado e redução de movimento.
 
-| Componente | Tecnologia e papel |
+<p align="center">
+  <a href="https://github.com/Sunrise-Initiative/sunrise-launcher">
+    <img src="https://raw.githubusercontent.com/Sunrise-Initiative/.github/main/profile/assets/launcher-preview.png" alt="Sunrise Launcher em modo claro, com o catálogo dos sete aplicativos e a interface Frutiger Aero" width="960">
+  </a>
+</p>
+
+A versão **0.2.0** está disponível como código-fonte, com instruções de compilação para Windows. O catálogo e a biblioteca local funcionam offline. Instalação automática e atualizações autenticadas fazem parte das próximas etapas. [Explore o repositório e as instruções de uso](https://github.com/Sunrise-Initiative/sunrise-launcher#readme).
+
+### Aplicativos em planejamento
+
+| Aplicativo | Foco |
 | --- | --- |
-| Shell | Qt 6 e QML para painel, dock e menu de aplicativos |
-| Lógica do sistema | Rust para descobrir e abrir aplicativos e integrar serviços |
-| Compositor próprio | Rust e Smithay, com a primeira prova prevista em modo aninhado |
-| Ambiente de desenvolvimento | Fedora em VM, com UEFI e Wayland |
+| **RisePhoto** | Edição de imagens, pintura e composição em camadas |
+| **RiseFilm** | Edição de vídeo e montagem |
+| **RiseVector** | Ilustração vetorial |
+| **RiseDocs** | Leitura, anotação e organização de PDFs |
+| **RiseMotion** | Animação, composição e efeitos |
+| **RiseLuma** | Organização de fotografias e revelação RAW |
+| **RiseDesign** | Criação de peças gráficas |
 
-## Primeira prévia pública
+O desenvolvimento segue a sequência **website → launcher → RisePhoto → RiseFilm**, com os demais aplicativos em etapas posteriores. O **Sunrise OS**, baseado em Linux, integra a visão de longo prazo. A evolução do projeto e o catálogo podem ser acompanhados no [site oficial](https://sunrise-website-orcin.vercel.app/).
 
-A meta é disponibilizar um desktop funcional em máquina virtual com três aplicativos próprios: **Sunrise Files**, **Calculadora** e **Bloco de Notas**. O **Sunrise Launcher** está planejado como a loja oficial para instalar e atualizar aplicativos e acompanhar novas versões do sistema.
+### Como trabalhamos
+
+- **Autonomia.** Priorizamos operação local, controle dos arquivos e uso offline.
+- **Qualidade de uso.** Desempenho, acessibilidade e consistência visual orientam as decisões.
+- **Desenvolvimento aberto.** Código, histórico de alterações e problemas conhecidos acompanham as entregas públicas.
+
+### Participe
+
+Relatos de problemas, sugestões de usabilidade e contribuições ao código ajudam a construir o Sunrise. Para começar, consulte as instruções do launcher e os testes documentados no repositório. Ao reportar uma falha, inclua a versão, o sistema operacional, os passos para reproduzir e o resultado esperado. [Abra ou acompanhe uma issue](https://github.com/Sunrise-Initiative/sunrise-launcher/issues).
+
+O Sunrise Launcher é distribuído sob **GPL-3.0-only**. As licenças e os créditos de recursos de terceiros acompanham o código.
